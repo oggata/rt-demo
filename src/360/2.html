@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>demo</title>
+  <link rel="stylesheet" href="../style.css?11">
+
+</head>
+<script src="../../vrview-gh-pages/build/vrview.min.js"></script>
+
+<script>
+  window.addEventListener('load', onVrViewLoad)
+  function onVrViewLoad() {
+    var vrView = new VRView.Player('#vrview', {
+      width: '100%',//横幅の指定
+      height: 300,//高さの指定
+      image: '../../images/R0010357.jpg',
+      //is_stereo: true //stereo画像を指定の場合はこれを指定。Monoの場合は不要
+    });
+  }
+</script>
+
+<body>
+
+
+<div id="vrview"></div>
+
+</body>
+</html>

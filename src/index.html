@@ -3,14 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <title>demo</title>
-  <link rel="stylesheet" href="./style.css?11">
+  <link rel="stylesheet" href="./style.css?22">
 
 </head>
+<style>
+  .hotspot{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .hotspot[slot="hotspot-red"]{
+    --min-hotspot-opacity: 0;
+    background-color: red;
+  }
+
+  .hotspot[slot="hotspot-360-1"]{
+    --min-hotspot-opacity: 0;
+    background-color: red;
+  }
+
+  .hotspot[slot="hotspot-360-2"]{
+    --min-hotspot-opacity: 0;
+    background-color: red;
+  }
+
+  .hotspot[slot="hotspot-360-3"]{
+    --min-hotspot-opacity: 0;
+    background-color: red;
+  }
+
+  .hotspot[slot="hotspot-yellow"]{
+    --min-hotspot-opacity: 0;
+    background-color: yellow;
+  }
+
+  .hotspot[slot="hotspot-blue"]{
+    --min-hotspot-opacity: 0;
+    background-color: blue;
+  }
+
+  .hotspot[slot="hotspot-green"]{
+    --min-hotspot-opacity: 0;
+    background-color: green;
+  }
+
+  .hotspot[slot="hotspot-orange"]{
+    --min-hotspot-opacity: 0;
+    background-color: orange;
+  }
+
+  .hotspot[slot="hotspot-white"]{
+    --min-hotspot-opacity: 0;
+    background-color: white;
+  }
+
+  .hotspot[slot="hotspot-white2"]{
+    --min-hotspot-opacity: 0;
+    background-color: white;
+  }
+
+  .annotation{
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    transform: translate(10px, 10px);
+    border-radius: 10px;
+    padding: 10px;
+    width:100px;
+  }
+  /* This keeps child nodes hidden while the element loads */
+  :not(:defined) > * {
+    display: none;
+  }
+</style>
+
 <body>
-<a href="./1.html">1</a>
-<a href="./2.html">2</a>
-<a href="./3.html">3</a>
-<a href="./4.html">4</a>
-<a href="./5.html">5</a>
+<!-- partial:index.partial.html -->
+<script
+type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+></script>
+
+<model-viewer
+  src="../glb/morioka.glb"
+  camera-controls
+  orientation="0 0 -90"
+  shadow-intensity="2"
+  class="model-viewer"
+>
+
+  <button class="hotspot" slot="hotspot-yellow" data-position="-2 2 2">
+    <div class="annotation"><a href="./3d/6.html">木伏飲食店</a></div>
+  </button>
+
+  <button class="hotspot" slot="hotspot-blue" data-position="2 2 1">
+    <div class="annotation"><a href="https://ja.wikipedia.org/wiki/%E9%96%8B%E9%81%8B%E6%A9%8B_(%E7%9B%9B%E5%B2%A1%E5%B8%82)" target="_blank">開運橋(wiki)</a></div>
+  </button>
+
+  <button class="hotspot" slot="hotspot-red" data-position="-1 2 1.2">
+    <div class="annotation"><a href="./360/1.html">歩道(360度)</a></div>
+  </button>
+
+  <button class="hotspot" slot="hotspot-360-2" data-position="-1 1.5 0">
+    <div class="annotation"><a href="./360/2.html">河川敷(360度)</a></div>
+  </button>
+
+  <button class="hotspot" slot="hotspot-360-3" data-position="1 1.5 0">
+    <div class="annotation"><a href="./360/3.html">河原(360度)</a></div>
+  </button>
+
+  <button class="hotspot" slot="hotspot-green" data-position="-3 2 2">
+    <div class="annotation"><a href="./3d/4.html">(市街)南部鉄器</a></div>
+  </button>
+
+  <button class="hotspot" slot="hotspot-orange" data-position="2 2 -2">
+    <div class="annotation"><a href="./3d/1.html">(市街)福田パン</a></div>
+  </button>
+
+  <button class="hotspot" slot="hotspot-white" data-position="0 1 -1.4">
+    <div class="annotation"><a href="./spring.html">春の景色</a></div>
+  </button>
+
+  <button class="hotspot" slot="hotspot-white2" data-position="-0.5 1 -1.4">
+    <div class="annotation"><a href="./spring.html">川の生き物</a></div>
+  </button>
+
+
+  <div class="annotation">
+    (赤)..風景を感じる
+    (青)..まちを感じる
+    (黄)..自然を感じる
+  </div>
+
+</model-viewer>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
 </body>
 </html>
