@@ -95,3 +95,24 @@ document.getElementById("winter").onclick = function () {
     document.getElementById('csssnow2nd').innerHTML = "";
   }
 };
+
+var isOmikuji = false;
+function omikuji() {
+    if(isOmikuji == false){
+      var img = document.getElementById("myImg");
+      //console.log(img);
+      var random = Math.floor(Math.random() * 10) + 1;
+      if(1 <= random && random < 4){
+        img.src = "./images/omikuji/2.png";
+      }else if(4 <= random && random < 6){
+        img.src = "./images/omikuji/3.png";
+      }else if(6 <= random && random < 8){
+        img.src = "./images/omikuji/4.png";
+      }else if(8 <= random && random < 9){
+        img.src = "./images/omikuji/5.png";
+      }else{
+        img.src = "./images/omikuji/6.png";
+      }
+      isOmikuji = true;
+    }
+}
