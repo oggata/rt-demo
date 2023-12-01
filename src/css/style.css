@@ -4,19 +4,19 @@ body {
   height: 100vh;
   width: 100vw;
   margin: 0;
-  background: linear-gradient(90deg, rgba(124,172,187,1) 30%, rgba(174,204,213,1) 100%);
+  background: #7cacbb;
 }
 
 
 .model-viewer-main {
-  width: 800px;
-  height: 800px;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
 }
 
 .model-viewer-modal {
-  width: 500px;
-  height: 500px;
-  background-color: white;
+  height: 80vh;
+  width: 80vw;
 }
 
 .layer {
@@ -98,7 +98,7 @@ body {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  background: #fff;
+  background: #4a6770;
   box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 13px;
   display: block;
@@ -120,7 +120,7 @@ body {
 }
 
 .button {
-  background: orange;
+  background: #ffc04c;
   opacity: 0.7;
   border-radius: 9px;
   box-shadow: 2px 4px 6px 3px rgba(0, 0, 0, .24);
