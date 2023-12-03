@@ -55,7 +55,7 @@ document.getElementById("winter").onclick = function () {
     document.getElementById('csssnow').innerHTML = "●";
     document.getElementById('csssnow2nd').innerHTML = "●";
   } else {
-    modal.setAttribute('src', './glb/morioka-color.glb');
+    modal.setAttribute('src', './glb/main.glb');
     season = "spring";
     document.getElementById('csssnow').innerHTML = "";
     document.getElementById('csssnow2nd').innerHTML = "";

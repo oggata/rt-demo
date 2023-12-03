@@ -26,7 +26,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <div id="csssnow" class="snow"></div>
 <div id="csssnow2nd" class="snow snow2nd"></div>
-<model-viewer id="model-viewer-main" src="./glb/main.glb" camera-controls orientation="0 0 -90" shadow-intensity="2" class="model-viewer-main"> 
+
+<model-viewer id="model-viewer-main" src="./glb/main.glb" camera-controls orientation="0 0 -90"  class="model-viewer-main"  camera-orbit = "120deg 40deg 120%"> 
 
   </button> 
 
@@ -103,7 +104,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modalTitle360">360度カメラ表示用のモーダル</h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <h5 class="modal-title" id="modalTitle360">360度カメラ</h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> </div>
         <div class="modal-body">
