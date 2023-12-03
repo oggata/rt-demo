@@ -12,8 +12,52 @@
 </head>
 
 
+<style>
+  
+
+
+#cardviewer {
+  margin: 3em auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+#model-viewer-modal {
+  width: 100%;
+  height: 300px;
+}
+
+.attribution {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1em;
+}
+
+.attribution h1 {
+  margin: 0 0 0.25em;
+}
+
+.attribution img {
+  opacity: 0.5;
+  height: 2em;
+}
+
+.attribution .cc {
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+
+
+</style>
+
   <!-- ナビゲーションバー -->
-  <nav class="navbar navbar-light bg-light fixed-top">
+  <nav class="navbar navbar-light bg-light fixed-top navbar-white bg-white">
     <!-- タイトル -->
     <a class="navbar-brand" href="#"> <img class="timlogo" src="./images/logo.png
 " width="300" ></a>
@@ -50,19 +94,19 @@
           <div id="wankosoba-big_link" class="annotation" data-toggle="modal" data-target="#Object3DModal">わんこそば2</div>
         </li>
         <li class="nav-item">
-          <div id="11111" class="annotation" data-toggle="modal" data-target="#Object3DModal">わんこそば3</div>
+          <div id="wankosoba-shoumeisho" class="annotation" data-toggle="modal" data-target="#Object3DModal">わんこそば3</div>
         </li>
         <li class="nav-item">
-          <div id="11111" class="annotation" data-toggle="modal" data-target="#Object3DModal">大きなコッペパン</div>
+          <div id="" class="annotation" data-toggle="modal" data-target="#Object3DModal">大きなコッペパン</div>
         </li>
         <li class="nav-item">
-          <div id="11111" class="annotation" data-toggle="modal" data-target="#Object3DModal">猫のおきもの</div>
+          <div id="cat_link" class="annotation" data-toggle="modal" data-target="#Object3DModal">猫のおきもの</div>
         </li>
        <li class="nav-item">
-          <div id="11111" class="annotation" data-toggle="modal" data-target="#Object3DModal">歩道(360度)</div>
+          <div id="hodo_link" class="annotation" data-toggle="modal" data-target="#Object3DModal">歩道(360度)</div>
         </li>
        <li class="nav-item">
-          <div id="11111" class="annotation" data-toggle="modal" data-target="#Object3DModal">河川敷(360度)</div>
+          <div id="kasenjiki_link" class="annotation" data-toggle="modal" data-target="#Object3DModal">河川敷(360度)</div>
         </li>
        <li class="nav-item">
           <div id="11111" class="annotation" data-toggle="modal" data-target="#Object3DModal">河原(360度)</div>
@@ -131,6 +175,7 @@
   <button id="cat" name="load-object-3d-model" class="button js-modal-button" slot="hotspot6.3" data-position="-1 2 -2.5" data-toggle="modal" data-target="#Object3DModal">
     <div class="annotation">猫のおきもの</div>
   </button> 
+
   <button id="kaiunbashi" name="load-pdf-data" class="button js-modal-button" slot="hotspot7" data-position="2 2 1" data-toggle="modal" data-target="#GuideModal">
     <div class="annotation">開運橋</div>
   </button> 
@@ -145,7 +190,53 @@
 </model-viewer>
 
 
-<div class="modal fade" id="Object3DModal" tabindex="-1" role="dialog" aria-labelledby="Object3DModalLabel" aria-hidden="true">
+<!-- Modal -->
+  <div class="modal fade" id="Object3DModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+
+            <!-- MODEL VIEWER INSIDE MODAL -->
+
+          <div id="cardviewer">
+              <!-- All you need to put beautiful, interactive 3D content on your site: -->
+              <model-viewer id="model-viewer-modal" class="model-viewer-modal" src=""
+                            alt="A 3D model of an astronaut"
+                            background-color="#70BCD1"
+                            shadow-intensity="1"
+                            camera-controls
+                            interaction-prompt="auto"
+                            auto-rotate ar magic-leap>
+              </model-viewer>
+              <section class="attribution">
+                <span>
+              </section>
+              
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- MODEL VIEWER OUTSIDE MODAL -->
+
+
+
+
+
+<div class="modal fade" id="Object3DModal2" tabindex="-1" role="dialog" aria-labelledby="Object3DModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -179,7 +270,7 @@
                 var vrView = new VRView.Player('#vrview', {
                   width: '100%',
                   height: 300,
-                  image: './images/R0010356.jpg',
+                  image: './images/hodo.jpg',
                 });
               }
             </script>
@@ -263,6 +354,6 @@
 </div>
 
 
-<script src="./script/script.js?aav"></script>
+<script src="./script/script.js?aaaa"></script>
 </body>
 </html>

@@ -5,20 +5,20 @@ document.getElementById("11111").onclick = function () {
 
 document.getElementById("hodo").onclick = function () {
   //document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
-  document.getElementById('model-viewer-modal').setAttribute('src', './images/hodo.jpg');
-  document.getElementById('modalTitle360').innerHTML = "歩道";
+  //document.getElementById('model-viewer-modal').setAttribute('src', './images/hodo.jpg');
+  //document.getElementById('modalTitle360').innerHTML = "歩道";
 };
 
 document.getElementById("kawara").onclick = function () {
   //document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
-  document.getElementById('model-viewer-modal').setAttribute('src', './images/hodo.jpg');
-  document.getElementById('modalTitle360').innerHTML = "河原";
+  //document.getElementById('model-viewer-modal').setAttribute('src', './images/hodo.jpg');
+  //document.getElementById('modalTitle360').innerHTML = "河原";
 };
 
 document.getElementById("kasenjiki").onclick = function () {
   //document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
-  document.getElementById('model-viewer-modal').setAttribute('src', './images/kasenjiki.jpg');
-  document.getElementById('modalTitle360').innerHTML = "河川敷";
+  //document.getElementById('model-viewer-modal').setAttribute('src', './images/kasenjiki.jpg');
+  //document.getElementById('modalTitle360').innerHTML = "河川敷";
 };
 
 document.getElementById("nanbutekki").onclick = function () {
@@ -62,6 +62,13 @@ document.getElementById("cat").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/cat.glb');
   document.getElementById('modalTitle3D').innerHTML = "猫のおきもの";
 };
+
+
+document.getElementById("cat_link").onclick = function () {
+  document.getElementById('model-viewer-modal').setAttribute('src', './glb/cat.glb');
+  document.getElementById('modalTitle3D').innerHTML = "猫のおきもの";
+};
+
 
 var season = "spring";
 document.getElementById("winter").onclick = function () {
