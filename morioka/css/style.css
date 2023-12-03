@@ -1,99 +1,135 @@
   @charset "UTF-8";
-
-.navbar {
-  color: #7cacbb;
-}
-
-.nav-item{
-  font-size: 1.1em;
-}
-
-body {
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  background: #7cacbb;
-}
-
-@media screen and (max-width: 640px) {
-  body {
-    font-size: 1.3em;
+  .navbar {
+    color: #7cacbb;
   }
-}
 
-.modal-content{
-  background: #F0F8FF;
-  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 13px;
-  opacity: 0.9;
-}
+  .nav-item {
+    font-size: 1.1em;
+  }
 
-.model-viewer-main {
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-}
+  body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background: #7cacbb;
+  }
 
+  @media screen and (max-width: 640px) {
+    body {
+      font-size: 1.3em;
+    }
+  }
 
+  .modal-content {
+    background: #F0F8FF;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 13px;
+    opacity: 0.9;
+  }
 
-.button {
-  background: #ffc04c;
-  opacity: 0.7;
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .24);
-  border: 1px solid orange;
-  font-size: 1.0em;
-  line-height: 0.5;
-  display: block;
-  padding: 7px 9px;
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
-  margin: 0;
-}
+  .model-viewer-main {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
 
+  #cardviewer {
+    margin: 3em auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+  }
 
-.timlogo{
-  width: 200px;
-  display: block;
-  margin: 0 auto;
-  padding-top: 15px;
-}
+  #model-viewer-modal {
+    width: 100%;
+    height: 300px;
+  }
 
-.kanko_link {
-  color: #333333;
-}
+  .attribution {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1em;
+  }
 
-.snow {
-  /*雪の色*/
-  color: snow;
-  /*雪の大きさ*/
-  font-size: 10px;
-  /*初期位置*/
-  position: fixed;
-  top: -5%;
-  /*雪を適当な幅で降らせる*/
-  text-shadow:
-  5vw   -100px 2px,
-  10vw  -400px 3px,
-  20vw  -500px 4px,
-  30vw  -580px 1px,
-  39vw  -250px 2px,
-  42vw  -340px 5px,
-  56vw  -150px 2px,
-  63vw  -180px 0,
-  78vw  -220px 4px,
-  86vw  -320px 9px,
-  94vw  -170px 7px;
-  animation: roll 5s linear infinite;
-}
-.snow2nd{animation: anim 8s linear infinite;}
+  .attribution h1 {
+    margin: 0 0 0.25em;
+  }
 
-@keyframes roll {
-    0% {transform:rotate(0deg);}
-   90% {opacity:1;}
-   100% {transform:rotate(20deg);top:100%;opacity:0;}
-}
-@keyframes anim {
-  100% {color:transparent;top:150%;}
-}
+  .attribution img {
+    opacity: 0.5;
+    height: 2em;
+  }
+
+  .attribution .cc {
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+
+  .button {
+    background: #ffc04c;
+    opacity: 0.7;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .24);
+    border: 1px solid orange;
+    font-size: 1.0em;
+    line-height: 0.5;
+    display: block;
+    padding: 7px 9px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .timlogo {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 15px;
+  }
+
+  .kanko_link {
+    color: #333333;
+  }
+
+  .snow {
+    /*雪の色*/
+    color: snow;
+    /*雪の大きさ*/
+    font-size: 10px;
+    /*初期位置*/
+    position: fixed;
+    top: -5%;
+    /*雪を適当な幅で降らせる*/
+    text-shadow: 5vw -100px 2px, 10vw -400px 3px, 20vw -500px 4px, 30vw -580px 1px, 39vw -250px 2px, 42vw -340px 5px, 56vw -150px 2px, 63vw -180px 0, 78vw -220px 4px, 86vw -320px 9px, 94vw -170px 7px;
+    animation: roll 5s linear infinite;
+  }
+
+  .snow2nd {
+    animation: anim 8s linear infinite;
+  }
+
+  @keyframes roll {
+    0% {
+      transform: rotate(0deg);
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(20deg);
+      top: 100%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes anim {
+    100% {
+      color: transparent;
+      top: 150%;
+    }
+  }
