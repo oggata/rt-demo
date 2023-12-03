@@ -19,47 +19,36 @@ document.getElementById("kasenjiki").onclick = function () {
 };
 document.getElementById("nanbutekki").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
-  document.getElementById('modalTitle3D').innerHTML = "南部鉄器";
 };
 document.getElementById("nanbutekki2").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki2.glb');
-  document.getElementById('modalTitle3D').innerHTML = "南部鉄器";
 };
 document.getElementById("nanbutekki-fish").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki-fish.glb');
-  document.getElementById('modalTitle3D').innerHTML = "南部鉄器";
 };
 document.getElementById("nanbutekki-bird").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki-bird.glb');
-  document.getElementById('modalTitle3D').innerHTML = "南部鉄器";
 };
 document.getElementById("fukudapan").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/fukudapan.glb');
-  document.getElementById('modalTitle3D').innerHTML = "大きなコッペパン";
 };
 document.getElementById("miyazawakenji").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/miyazawakenji.glb');
-  document.getElementById('modalTitle3D').innerHTML = "宮澤賢治像";
 };
 document.getElementById("wankosoba").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/wankosoba.glb');
-  document.getElementById('modalTitle3D').innerHTML = "わんこそば";
 };
 document.getElementById("wankosoba-big").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/wankosoba-big.glb');
-  document.getElementById('modalTitle3D').innerHTML = "わんこそば";
 };
 document.getElementById("wankosoba-shoumeisho").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/wankosoba-shoumeisho.glb');
-  document.getElementById('modalTitle3D').innerHTML = "わんこそば";
 };
 document.getElementById("cat").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/cat.glb');
-  document.getElementById('modalTitle3D').innerHTML = "猫のおきもの";
 };
 document.getElementById("cat_link").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/cat.glb');
-  document.getElementById('modalTitle3D').innerHTML = "猫のおきもの";
 };
 var season = "spring";
 document.getElementById("winter").onclick = function () {
