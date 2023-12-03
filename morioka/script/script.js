@@ -1,7 +1,3 @@
-document.getElementById("11111").onclick = function () {
-  //var modal = document.getElementById('model-viewer-modal');
-  document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
-};
 document.getElementById("hodo").onclick = function () {
   //document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
   //document.getElementById('model-viewer-modal').setAttribute('src', './images/hodo.jpg');
@@ -47,9 +43,9 @@ document.getElementById("wankosoba-shoumeisho").onclick = function () {
 document.getElementById("cat").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/cat.glb');
 };
-document.getElementById("cat_link").onclick = function () {
-  document.getElementById('model-viewer-modal').setAttribute('src', './glb/cat.glb');
-};
+
+
+
 var season = "spring";
 document.getElementById("winter").onclick = function () {
   var modal = document.getElementById('model-viewer-main');
