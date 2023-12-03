@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>盛岡かわまち</title>
+  <link rel="stylesheet" href="./css/style.css?44">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+<header>
+   <h1>
+      <a href="/">KAWAMACHI MORIOKA</a>
+   </h1>
+   <nav class="pc-nav">
+      <ul>
+         <li><a href="#"></a></li>
+      </ul>
+   </nav>
+</header>
+
+
+<div id="csssnow" class="snow"></div>
+<div id="csssnow2nd" class="snow snow2nd"></div>
+
+  <div class="layer js-modal">
+    <div class="modal">
+      <div class="modal__inner">
+        <div class="modal__button-wrap"> <button class="close-button js-close-button">
+            <span></span>
+            <span></span>
+          </button> </div>
+        <div class="modal__contents">
+          <div class="modal__content">
+            <model-viewer id="model-viewer-modal" src="" camera-controls orientation="0 0 -90" shadow-intensity="2" class="model-viewer-modal" id="model-viewer-modal"> </model-viewer> ... </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layer js-modal-360">
+    <div class="modal">
+      <div class="modal__inner">
+        <div class="modal__button-wrap"> <button class="close-button js-close-button-360">
+            <span></span>
+            <span></span>
+          </button> </div>
+        <div class="modal__contents">
+          <div class="modal__content">
+            <script src="../vrview-gh-pages/build/vrview.min.js"></script>
+            <script>
+              window.addEventListener('load', onVrViewLoad)
+              function onVrViewLoad() {
+                var vrView = new VRView.Player('#vrview', {
+                  width: '100%',
+                  height: 300,
+                  image: './images/R0010356.jpg',
+                  //is_stereo: true //stereo画像を指定の場合はこれを指定。Monoの場合は不要
+                });
+              }
+            </script>
+            <body>
+            <div id="vrview"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="layer js-modal-pdf">
+    <div class="modal">
+      <div class="modal__inner">
+        <div class="modal__button-wrap"> <button class="close-button js-close-button-pdf">
+            <span></span>
+            <span></span>
+          </button> </div>
+        <div class="modal__contents">
+          <div class="modal__content">
+
+<img id="myImg" src="./images/omikuji/1.png" width=50% onClick="omikuji()">
+
+<br>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layer js-modal-omikuji">
+    <div class="modal">
+      <div class="modal__inner">
+        <div class="modal__button-wrap"> <button class="close-button js-close-button-360">
+            <span></span>
+            <span></span>
+          </button> </div>
+        <div class="modal__contents">
+          <div class="modal__content">
+            <img src="image.png" alt="海の写真" title="空と海">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <model-viewer id="model-viewer-main" src="./glb/morioka-color.glb" camera-controls orientation="0 0 -90" shadow-intensity="2" class="model-viewer-main" id="model-viewer-main"> 
+    <button id="hodo" name="load-360-data" class="button js-modal-button" slot="hotspot1" data-position="-1 2 1.2">
+    歩道
+  </button>
+  <button id="kasenjiki" name="load-360-data" class="button js-modal-button" slot="hotspot2" data-position="-1 1.5 0">
+    <div class="annotation">河川敷</div>
+  </button> 
+  <button id="kawara" name="load-360-data" class="button js-modal-button" slot="hotspot3" data-position="1 1.5 0">
+    <div class="annotation">河原</div>
+  </button> 
+
+  <button id="nanbutekki" name="load-3d-data" class="button js-modal-button" slot="hotspot4" data-position="-2.6 2.3 1">
+    <div class="annotation">南部鉄器1</div>
+  </button> 
+  <button id="nanbutekki2" name="load-3d-data" class="button js-modal-button" slot="hotspot4" data-position="-2.8 2.3 1">
+    <div class="annotation">南部鉄器2</div>
+  </button> 
+
+  <button id="nanbutekki-fish" name="load-3d-data" class="button js-modal-button" slot="hotspot4" data-position="-3 2.3 1">
+    <div class="annotation">南部鉄器(さかな)</div>
+  </button> 
+
+  <button id="nanbutekki-bird" name="load-3d-data" class="button js-modal-button" slot="hotspot4" data-position="-3 2.3 1">
+    <div class="annotation">南部鉄器(とり)</div>
+  </button> 
+
+  <button id="fukudapan" name="load-3d-data" class="button js-modal-button" slot="hotspot5" data-position="2 2 -2">
+    <div class="annotation">大きなコッペパン</div>
+  </button> 
+  
+  <button id="jihanki" name="load-3d-data" class="button js-modal-button" slot="hotspot5.1" data-position="2 2 -3">
+    <div class="annotation">自動販売機</div>
+  </button> 
+
+  <button id="miyazawakenji" name="load-3d-data" class="button js-modal-button" slot="hotspot6.1" data-position="1.5 3 3">
+    <div class="annotation">宮澤賢治像</div>
+  </button> 
+
+  <button id="wankosoba" name="load-3d-data" class="button js-modal-button" slot="hotspot6.2" data-position="0.2 3 3">
+    <div class="annotation">わんこそば</div>
+  </button> 
+
+  <button id="wankosoba-big" name="load-3d-data" class="button js-modal-button" slot="hotspot6.2" data-position="0.2 3 3">
+    <div class="annotation">わんこそば2</div>
+  </button> 
+
+  <button id="wankosoba-shoumeisho" name="load-3d-data" class="button js-modal-button" slot="hotspot6.2" data-position="0.2 3 3">
+    <div class="annotation">わんこそば3</div>
+  </button>
+
+  <button id="cat" name="load-3d-data" class="button js-modal-button" slot="hotspot6.3" data-position="-1 2 -2.5">
+    <div class="annotation">猫のおきもの</div>
+  </button> 
+  <button id="kaiunbashi" name="load-pdf-data" class="button js-modal-button" slot="hotspot7" data-position="2 2 1">
+    <div class="annotation">開運橋</div>
+  </button> 
+
+  <button id="kaiunbashi" name="load-pdf-data" class="button js-modal-button" slot="hotspot7" data-position="2 2 1">
+    <div class="annotation">おみくじ</div>
+  </button> 
+
+  <button id="winter" name="change-model" class="button js-modal-button" slot="hotspot5.5" data-position="0 2 -2">
+    <div class="annotation">冬バージョン</div>
+  </button> 
+</model-viewer>
+<script src="./script/script.js?aav"></script>

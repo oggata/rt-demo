@@ -2,48 +2,282 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>盛岡かわまち</title>
-  <link rel="stylesheet" href="./css/style.css?44">
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <title>kawamachi morioka</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+ <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
-<header>
-   <h1>
-      <a href="/">KAWAMACHI MORIOKA</a>
-   </h1>
-   <nav class="pc-nav">
-      <ul>
-         <li><a href="#"></a></li>
+<style>
+  @charset "UTF-8";
+
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background: #7cacbb;
+}
+
+
+
+
+.modal-content{
+  background: #4a6770;
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 13px;
+  opacity: 0.7;
+}
+
+
+.model-viewer-main {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+.model-viewer-modal {
+  height: 300px;
+  width: 300px;
+  margin: 0;
+}
+
+
+.button {
+  background: #ffc04c;
+  opacity: 0.7;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .24);
+  border: 1px solid orange;
+  font-size: 1.0em;
+  line-height: 0.5;
+  display: block;
+  padding: 7px 9px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  margin: 0;
+}
+
+header {
+   padding: 30px 4% 10px;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   background-color: transparent;
+   display: flex;
+   align-items: center;
+}
+h1 {
+   margin: 0; padding: 0;
+   font-size: 20px;
+}
+a { 
+   text-decoration: none;
+   color: #fff;
+}
+nav {
+   margin: 0 0 0 auto;
+}
+ul {
+   list-style: none;
+   margin: 0;
+   display: flex;
+}
+li {
+   margin: 0 0 0 15px;
+   font-size: 14px;
+}
+.main-visual {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background: url('main_visual.jpg') top center / cover no-repeat;
+}
+h2 {
+   margin: 0;
+   font-size: 30px;
+   font-weight: normal;
+   color: #fff;
+}
+
+
+
+.snow {
+  /*雪の色*/
+  color: snow;
+  /*雪の大きさ*/
+  font-size: 10px;
+  /*初期位置*/
+  position: fixed;
+  top: -5%;
+  /*雪を適当な幅で降らせる*/
+  text-shadow:
+  5vw   -100px 2px,
+  10vw  -400px 3px,
+  20vw  -500px 4px,
+  30vw  -580px 1px,
+  39vw  -250px 2px,
+  42vw  -340px 5px,
+  56vw  -150px 2px,
+  63vw  -180px 0,
+  78vw  -220px 4px,
+  86vw  -320px 9px,
+  94vw  -170px 7px;
+  /*雪アニメーション1*/
+  animation: roll 5s linear infinite;
+}
+  /*2つめの雪アニメーション*/
+.snow2nd{animation: anim 8s linear infinite;}
+
+@keyframes roll {
+    0% {transform:rotate(0deg);}
+   90% {opacity:1;}
+   100% {transform:rotate(20deg);top:100%;opacity:0;}
+}
+@keyframes anim {
+  100% {color:transparent;top:150%;}
+}
+
+
+</style>
+
+</head>
+
+
+  
+
+
+  <!-- ナビゲーションバー -->
+  <nav class="navbar navbar-light bg-light fixed-top">
+    <!-- タイトル -->
+    <a class="navbar-brand" href="#">kawamachi morioka</a>
+    <!-- ハンバーガーメニュー -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- ナビゲーションメニュー -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <div id="11111" class="annotation" data-toggle="modal" data-target="#exampleModal">南部鉄器2</div>
+        </li>
+        <li class="nav-item">
+          <div id="11111" class="annotation" data-toggle="modal" data-target="#exampleModal">南部鉄器2</div>
+        </li>
+        <li class="nav-item">
+          <div id="11111" class="annotation" data-toggle="modal" data-target="#exampleModal">南部鉄器2</div>
+        </li>
+        <li class="nav-item">
+          <div id="11111" class="annotation" data-toggle="modal" data-target="#exampleModal">南部鉄器2</div>
+        </li>
+        <li class="nav-item">
+          <div id="11111" class="annotation" data-toggle="modal" data-target="#exampleModal">南部鉄器2</div>
+        </li>
       </ul>
-   </nav>
-</header>
+    </div>
+  </nav>
 
-<div id="csssnow" class="snow"></div>
-<div id="csssnow2nd" class="snow snow2nd"></div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-  <div class="layer js-modal">
-    <div class="modal">
-      <div class="modal__inner">
-        <div class="modal__button-wrap"> <button class="close-button js-close-button">
-            <span></span>
-            <span></span>
-          </button> </div>
-        <div class="modal__contents">
-          <div class="modal__content">
-            <model-viewer id="model-viewer-modal" src="" camera-controls orientation="0 0 -90" shadow-intensity="2" class="model-viewer-modal" id="model-viewer-modal"> </model-viewer> ... </div>
-        </div>
+
+
+  <model-viewer id="model-viewer-main" src="./glb/morioka-color.glb" camera-controls orientation="0 0 -90" shadow-intensity="2" class="model-viewer-main" id="model-viewer-main"> 
+    <button id="hodo" name="load-360-data" class="button js-modal-button" slot="hotspot1" data-position="-1 2 1.2" data-toggle="modal" data-target="#exampleModal2">
+    歩道
+  </button>
+  <button id="kasenjiki" name="load-360-data" class="button js-modal-button" slot="hotspot2" data-position="-1 1.5 0" data-toggle="modal" data-target="#exampleModal2">
+    <div class="annotation">河川敷</div>
+  </button> 
+  <button id="kawara" name="load-360-data" class="button js-modal-button" slot="hotspot3" data-position="1 1.5 0" data-toggle="modal" data-target="#exampleModal2">
+    <div class="annotation">河原</div>
+  </button> 
+
+  <button id="nanbutekki" name="load-3d-data" class="button js-modal-button" slot="hotspot4" data-position="-2.6 2.3 1" data-toggle="modal" data-target="#exampleModal">
+    <div class="annotation">南部鉄器1</div>
+  </button> 
+  <button id="nanbutekki2" name="load-3d-data" class="button js-modal-button" slot="hotspot4" data-position="-2.8 2.3 1">
+    <div class="annotation" data-toggle="modal" data-target="#exampleModal">南部鉄器2</div>
+  </button> 
+
+  <button id="nanbutekki-fish" name="load-3d-data" class="button js-modal-button" slot="hotspot4" data-position="-3 2.3 1">
+    <div class="annotation" data-toggle="modal" data-target="#exampleModal">南部鉄器(さかな)</div>
+  </button> 
+
+  <button id="nanbutekki-bird" name="load-3d-data" class="button js-modal-button" slot="hotspot4" data-position="-3 2.3 1">
+    <div class="annotation" data-toggle="modal" data-target="#exampleModal">南部鉄器(とり)</div>
+  </button> 
+
+  <button id="fukudapan" name="load-3d-data" class="button js-modal-button" slot="hotspot5" data-position="2 2 -2">
+    <div class="annotation" data-toggle="modal" data-target="#exampleModal">大きなコッペパン</div>
+  </button> 
+  
+  <button id="jihanki" name="load-3d-data" class="button js-modal-button" slot="hotspot5.1" data-position="2 2 -3">
+    <div class="annotation" data-toggle="modal" data-target="#exampleModal">自動販売機</div>
+  </button> 
+
+  <button id="miyazawakenji" name="load-3d-data" class="button js-modal-button" slot="hotspot6.1" data-position="1.5 3 3">
+    <div class="annotation" data-toggle="modal" data-target="#exampleModal">宮澤賢治像</div>
+  </button> 
+
+  <button id="wankosoba" name="load-3d-data" class="button js-modal-button" slot="hotspot6.2" data-position="0.2 3 3">
+    <div class="annotation" data-toggle="modal" data-target="#exampleModal">わんこそば</div>
+  </button> 
+
+  <button id="wankosoba-big" name="load-3d-data" class="button js-modal-button" slot="hotspot6.2" data-position="0.2 3 3">
+    <div class="annotation" data-toggle="modal" data-target="#exampleModal">わんこそば2</div>
+  </button> 
+
+  <button id="wankosoba-shoumeisho" name="load-3d-data" class="button js-modal-button" slot="hotspot6.2" data-position="0.2 3 3" >
+    <div class="annotation" data-toggle="modal" data-target="#exampleModal">わんこそば3</div>
+  </button>
+
+  <button id="cat" name="load-3d-data" class="button js-modal-button" slot="hotspot6.3" data-position="-1 2 -2.5" data-toggle="modal" data-target="#exampleModal">
+    <div class="annotation">猫のおきもの</div>
+  </button> 
+  <button id="kaiunbashi" name="load-pdf-data" class="button js-modal-button" slot="hotspot7" data-position="2 2 1" data-toggle="modal" data-target="#exampleModal4">
+    <div class="annotation">開運橋</div>
+  </button> 
+
+  <button id="kaiunbashi" name="load-pdf-data" class="button js-modal-button" slot="hotspot7" data-position="2 2 1" data-toggle="modal" data-target="#exampleModal5">
+    <div class="annotation">おみくじ</div>
+  </button> 
+
+  <button id="winter" name="change-model" class="button js-modal-button" slot="hotspot5.5" data-position="0 2 -2">
+    <div class="annotation">冬バージョン</div>
+  </button> 
+</model-viewer>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle3D">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <model-viewer id="model-viewer-modal" src="" camera-controls orientation="0 0 -90" shadow-intensity="2" class="model-viewer-modal" id="model-viewer-modal"> </model-viewer>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="layer js-modal-360">
-    <div class="modal">
-      <div class="modal__inner">
-        <div class="modal__button-wrap"> <button class="close-button js-close-button-360">
-            <span></span>
-            <span></span>
-          </button> </div>
-        <div class="modal__contents">
-          <div class="modal__content">
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle3D">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
             <script src="../vrview-gh-pages/build/vrview.min.js"></script>
             <script>
               window.addEventListener('load', onVrViewLoad)
@@ -58,112 +292,193 @@
             </script>
             <body>
             <div id="vrview"></div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
+</div>
 
-<div class="layer js-modal-pdf">
-    <div class="modal">
-      <div class="modal__inner">
-        <div class="modal__button-wrap"> <button class="close-button js-close-button-pdf">
-            <span></span>
-            <span></span>
-          </button> </div>
-        <div class="modal__contents">
-          <div class="modal__content">
 
-<img id="myImg" src="./images/omikuji/1.png" width=50% onClick="omikuji()">
-
-<br>
-
-          </div>
-        </div>
+<div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<div class="card">
+                    <img class="card-img-top" src="./images/book.png
+">
+                    <div class="card-block">
+                        <h4 class="card-title">Tawshif Ahsan Khan</h4>
+                        <div class="meta">
+                            <a href="#">Friends</a>
+                        </div>
+                        <div class="card-text">
+                            Tawshif is a web designer living in Bangladesh.
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="float-right">Joined in 2013</span>
+                        <span><i class=""></i>75 Friends</span>
+                    </div>
+                </div>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="layer js-modal-omikuji">
-    <div class="modal">
-      <div class="modal__inner">
-        <div class="modal__button-wrap"> <button class="close-button js-close-button-360">
-            <span></span>
-            <span></span>
-          </button> </div>
-        <div class="modal__contents">
-          <div class="modal__content">
-            <img src="image.png" alt="海の写真" title="空と海">
-          </div>
-        </div>
+
+<div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">おみくじ</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<div class="card">
+                    <img id="myImg" src="./images/omikuji/1.png" width=50% onClick="omikuji()">
+                    <div class="card-block">
+
+                    </div>
+                    <div class="card-footer">
+                        <span class="float-right">...</span>
+                        <span><i class=""></i>良い運勢になったかな？</span>
+                    </div>
+                </div>
       </div>
     </div>
   </div>
+</div>
 
 
-  <model-viewer id="model-viewer-main" src="./glb/morioka-color.glb" camera-controls orientation="0 0 -90" shadow-intensity="2" class="model-viewer-main" id="model-viewer-main"> 
-    <button id="hodo" name="load-360-data" class="button js-modal-button" slot="hotspot1" data-position="-1 2 1.2">
-    歩道
-  </button>
-  <button id="kasenjiki" name="load-360-data" class="button js-modal-button" slot="hotspot2" data-position="-1 1.5 0">
-    <div class="annotation">河川敷</div>
-  </button> 
-  <button id="kawara" name="load-360-data" class="button js-modal-button" slot="hotspot3" data-position="1 1.5 0">
-    <div class="annotation">河原</div>
-  </button> 
 
-  <button id="nanbutekki" name="load-3d-data" class="button js-modal-button" slot="hotspot4" data-position="-2.6 2.3 1">
-    <div class="annotation">南部鉄器1</div>
-  </button> 
-  <button id="nanbutekki2" name="load-3d-data" class="button js-modal-button" slot="hotspot4" data-position="-2.8 2.3 1">
-    <div class="annotation">南部鉄器2</div>
-  </button> 
+<div class="modal fade" id="exampleModal99" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <model-viewer id="model-viewer-modal" src="" camera-controls orientation="0 0 -90" shadow-intensity="2" class="model-viewer-modal" id="model-viewer-modal"> </model-viewer>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <button id="nanbutekki-fish" name="load-3d-data" class="button js-modal-button" slot="hotspot4" data-position="-3 2.3 1">
-    <div class="annotation">南部鉄器(さかな)</div>
-  </button> 
 
-  <button id="nanbutekki-bird" name="load-3d-data" class="button js-modal-button" slot="hotspot4" data-position="-3 2.3 1">
-    <div class="annotation">南部鉄器(とり)</div>
-  </button> 
 
-  <button id="fukudapan" name="load-3d-data" class="button js-modal-button" slot="hotspot5" data-position="2 2 -2">
-    <div class="annotation">大きなコッペパン</div>
-  </button> 
-  
-  <button id="jihanki" name="load-3d-data" class="button js-modal-button" slot="hotspot5.1" data-position="2 2 -3">
-    <div class="annotation">自動販売機</div>
-  </button> 
+<script>
+document.getElementById("11111").onclick = function () {
+  var modal = document.getElementById('model-viewer-modal');
+  modal.setAttribute('src', './glb/nanbutekki.glb');
+};
 
-  <button id="miyazawakenji" name="load-3d-data" class="button js-modal-button" slot="hotspot6.1" data-position="1.5 3 3">
-    <div class="annotation">宮澤賢治像</div>
-  </button> 
+document.getElementById("hodo").onclick = function () {
+  //document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
+  document.getElementById('modalTitle3D').innerHTML = "南部鉄器";
+};
 
-  <button id="wankosoba" name="load-3d-data" class="button js-modal-button" slot="hotspot6.2" data-position="0.2 3 3">
-    <div class="annotation">わんこそば</div>
-  </button> 
+document.getElementById("kawara").onclick = function () {
+  //document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
+  document.getElementById('modalTitle3D').innerHTML = "南部鉄器";
+};
 
-  <button id="wankosoba-big" name="load-3d-data" class="button js-modal-button" slot="hotspot6.2" data-position="0.2 3 3">
-    <div class="annotation">わんこそば2</div>
-  </button> 
+document.getElementById("kasenjiki").onclick = function () {
+  //document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
+  document.getElementById('modalTitle3D').innerHTML = "南部鉄器";
+};
 
-  <button id="wankosoba-shoumeisho" name="load-3d-data" class="button js-modal-button" slot="hotspot6.2" data-position="0.2 3 3">
-    <div class="annotation">わんこそば3</div>
-  </button>
+document.getElementById("nanbutekki").onclick = function () {
+  document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
+  document.getElementById('modalTitle3D').innerHTML = "南部鉄器";
+};
+document.getElementById("nanbutekki2").onclick = function () {
+  document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki2.glb');
+  document.getElementById('modalTitle3D').innerHTML = "南部鉄器";
+};
+document.getElementById("nanbutekki-fish").onclick = function () {
+  document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki-fish.glb');
+  document.getElementById('modalTitle3D').innerHTML = "南部鉄器";
+};
+document.getElementById("nanbutekki-bird").onclick = function () {
+  document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki-bird.glb');
+  document.getElementById('modalTitle3D').innerHTML = "南部鉄器";
+};
+document.getElementById("fukudapan").onclick = function () {
+  document.getElementById('model-viewer-modal').setAttribute('src', './glb/fukudapan.glb');
+  document.getElementById('modalTitle3D').innerHTML = "大きなコッペパン";
+};
+document.getElementById("jihanki").onclick = function () {
+  document.getElementById('model-viewer-modal').setAttribute('src', './glb/jihanki.glb');
+  document.getElementById('modalTitle3D').innerHTML = "自動販売機";
+};
+document.getElementById("miyazawakenji").onclick = function () {
+  document.getElementById('model-viewer-modal').setAttribute('src', './glb/miyazawakenji.glb');
+  document.getElementById('modalTitle3D').innerHTML = "宮澤賢治像";
+};
+document.getElementById("wankosoba").onclick = function () {
+  document.getElementById('model-viewer-modal').setAttribute('src', './glb/wankosoba.glb');
+  document.getElementById('modalTitle3D').innerHTML = "わんこそば";
+};
+document.getElementById("wankosoba-big").onclick = function () {
+  document.getElementById('model-viewer-modal').setAttribute('src', './glb/wankosoba-big.glb');
+  document.getElementById('modalTitle3D').innerHTML = "わんこそば";
+};
+document.getElementById("wankosoba-shoumeisho").onclick = function () {
+  document.getElementById('model-viewer-modal').setAttribute('src', './glb/wankosoba-shoumeisho.glb');
+  document.getElementById('modalTitle3D').innerHTML = "わんこそば";
+};
+document.getElementById("cat").onclick = function () {
+  document.getElementById('model-viewer-modal').setAttribute('src', './glb/cat.glb');
+  document.getElementById('modalTitle3D').innerHTML = "猫のおきもの";
+};
 
-  <button id="cat" name="load-3d-data" class="button js-modal-button" slot="hotspot6.3" data-position="-1 2 -2.5">
-    <div class="annotation">猫のおきもの</div>
-  </button> 
-  <button id="kaiunbashi" name="load-pdf-data" class="button js-modal-button" slot="hotspot7" data-position="2 2 1">
-    <div class="annotation">開運橋</div>
-  </button> 
+var season = "spring";
+document.getElementById("winter").onclick = function () {
+  var modal = document.getElementById('model-viewer-main');
+  if(season == "spring"){
+    modal.setAttribute('src', './glb/winter.glb');
+    season = "winter";
+    document.getElementById('csssnow').innerHTML = "●";
+    document.getElementById('csssnow2nd').innerHTML = "●";
+  }else{
+    modal.setAttribute('src', './glb/morioka-color.glb');
+    season = "spring";
+    document.getElementById('csssnow').innerHTML = "";
+    document.getElementById('csssnow2nd').innerHTML = "";
+  }
+};
 
-  <button id="kaiunbashi" name="load-pdf-data" class="button js-modal-button" slot="hotspot7" data-position="2 2 1">
-    <div class="annotation">おみくじ</div>
-  </button> 
+var isOmikuji = false;
+function omikuji() {
+    if(isOmikuji == false){
+      var img = document.getElementById("myImg");
+      //console.log(img);
+      var random = Math.floor(Math.random() * 10) + 1;
+      if(1 <= random && random < 4){
+        img.src = "./images/omikuji/2.png";
+      }else if(4 <= random && random < 6){
+        img.src = "./images/omikuji/3.png";
+      }else if(6 <= random && random < 8){
+        img.src = "./images/omikuji/4.png";
+      }else if(8 <= random && random < 9){
+        img.src = "./images/omikuji/5.png";
+      }else{
+        img.src = "./images/omikuji/6.png";
+      }
+      isOmikuji = true;
+    }
+}
 
-  <button id="winter" name="change-model" class="button js-modal-button" slot="hotspot5.5" data-position="0 2 -2">
-    <div class="annotation">冬バージョン</div>
-  </button> 
-</model-viewer>
-<script src="./script/script.js?aav"></script>
+</script>
+</body>
+</html>
