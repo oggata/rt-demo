@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="../vrview-gh-pages/build/vrview.min.js"></script>
   <link rel="stylesheet" href="./css/style.css?abcdr1"> </head>
 <!-- ナビゲーションバー -->
 <nav class="navbar navbar-light bg-light fixed-top navbar-white bg-white">
@@ -124,17 +125,6 @@
           <span aria-hidden="true">&times;</span>
         </button> </div>
         <div class="modal-body">
-          <script src="../vrview-gh-pages/build/vrview.min.js"></script>
-          <script>
-            window.addEventListener('load', onVrViewLoad)
-              function onVrViewLoad() {
-                var vrView = new VRView.Player('#vrview', {
-                  width: '100%',
-                  height: 300,
-                  image: './images/hodo.jpg',
-                });
-              }
-          </script>
           <body>
             <div id="vrview"></div>
         </div>
@@ -202,6 +192,6 @@
 </div>
 
 
-<script src="./script/script.js?bbb"></script>
+<script src="./script/script.js?bddbb"></script>
 </body>
 </html>

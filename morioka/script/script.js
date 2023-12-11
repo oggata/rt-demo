@@ -1,17 +1,63 @@
+var vrView;
+
+function onLoad() {
+  vrView = new VRView.Player('#vrview', {
+    width: '100%',
+    height: 480,
+    image: '/images/hodo.jpg',
+    is_stereo: true,
+    is_autopan_off: true
+  });
+  vrView.on('ready', onVRViewReady);
+  vrView.on('modechange', onModeChange);
+  vrView.on('getposition', onGetPosition);
+  vrView.on('error', onVRViewError);
+}
+
+function replace1(){
+  vrView.setContent({
+    image: '/images/hodo.jpg',
+    preview:'/images/hodo.jpg',
+    is_stereo: true
+  });                     
+}
+function replace2(){
+  vrView.setContent({
+    image: '/images/kasenjiki.jpg',
+    preview:'/images/kasenjiki.jpg',
+    is_stereo: true
+  });                     
+}
+function replace3(){
+  vrView.setContent({
+    image: '/images/kasenjiki.jpg',
+    preview:'/images/kasenjiki.jpg',
+    is_stereo: true
+  });                     
+}
+window.addEventListener('load', onLoad);
+
+
+
+
+
 document.getElementById("hodo").onclick = function () {
   //document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
   //document.getElementById('model-viewer-modal').setAttribute('src', './images/hodo.jpg');
   //document.getElementById('modalTitle360').innerHTML = "歩道";
+  replace1();
 };
 document.getElementById("kawara").onclick = function () {
   //document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
   //document.getElementById('model-viewer-modal').setAttribute('src', './images/hodo.jpg');
   //document.getElementById('modalTitle360').innerHTML = "河原";
+  replace2();
 };
 document.getElementById("kasenjiki").onclick = function () {
   //document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
   //document.getElementById('model-viewer-modal').setAttribute('src', './images/kasenjiki.jpg');
   //document.getElementById('modalTitle360').innerHTML = "河川敷";
+  replace3();
 };
 document.getElementById("nanbutekki").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
