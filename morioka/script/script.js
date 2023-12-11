@@ -38,9 +38,6 @@ function replace3(){
 window.addEventListener('load', onLoad);
 
 
-
-
-
 document.getElementById("hodo").onclick = function () {
   //document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
   //document.getElementById('model-viewer-modal').setAttribute('src', './images/hodo.jpg');
@@ -86,11 +83,6 @@ document.getElementById("wankosoba-big").onclick = function () {
 document.getElementById("wankosoba-shoumeisho").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/wankosoba-shoumeisho.glb');
 };
-document.getElementById("cat").onclick = function () {
-  document.getElementById('model-viewer-modal').setAttribute('src', './glb/cat.glb');
-};
-
-
 
 var season = "spring";
 document.getElementById("winter").onclick = function () {
@@ -100,13 +92,21 @@ document.getElementById("winter").onclick = function () {
     season = "winter";
     document.getElementById('csssnow').innerHTML = "●";
     document.getElementById('csssnow2nd').innerHTML = "●";
-  } else {
+  } else if(season == "winter") {
+    modal.setAttribute('src', './glb/main-night.glb');
+    season = "night";
+    document.getElementById('csssnow').innerHTML = "";
+    document.getElementById('csssnow2nd').innerHTML = "";
+  } else{
     modal.setAttribute('src', './glb/main.glb');
     season = "spring";
     document.getElementById('csssnow').innerHTML = "";
     document.getElementById('csssnow2nd').innerHTML = "";
   }
 };
+
+
+
 var isOmikuji = false;
 
 function omikuji() {
