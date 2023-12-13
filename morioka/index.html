@@ -2,12 +2,12 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>kawamachi morioka</title>
+  <title>kawamachi nft morioka</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script src="../vrview-gh-pages/build/vrview.min.js"></script>
-  <link rel="stylesheet" href="./css/style.css?abcdr1"> </head>
+  <link rel="stylesheet" href="./css/style.css"> </head>
 <!-- ナビゲーションバー -->
 <nav class="navbar navbar-light bg-light fixed-top navbar-white bg-white">
   <!-- タイトル --><a class="navbar-brand" href="#"> <img class="timlogo" src="./images/logo.png
@@ -18,15 +18,9 @@
   <!-- ナビゲーションメニュー -->
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a href="https://www.mlit.go.jp/river/kankyo/main/kankyou/machizukuri/">かわまちづくり支援制度とは</a>
-      </li>
-      <li class="nav-item">
-        <a href="https://www.mlit.go.jp/river/kankyo/main/kankyou/machizukuri/map.html">全国かわまちづくりMAP</a>
-      </li>
-      <li class="nav-item">
-        <a href="https://www.mlit.go.jp/river/kankyo/main/kankyou/machizukuri/taisyo.html">かわまち大賞</a>
-      </li>
+      <li class="nav-item"> <a href="https://www.mlit.go.jp/river/kankyo/main/kankyou/machizukuri/">かわまちづくり支援制度とは</a> </li>
+      <li class="nav-item"> <a href="https://www.mlit.go.jp/river/kankyo/main/kankyou/machizukuri/map.html">全国かわまちづくりMAP</a> </li>
+      <li class="nav-item"> <a href="https://www.mlit.go.jp/river/kankyo/main/kankyou/machizukuri/taisyo.html">かわまち大賞</a> </li>
     </ul>
   </div>
 </nav>
@@ -35,13 +29,10 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <div id="csssnow" class="snow"></div>
 <div id="csssnow2nd" class="snow snow2nd"></div>
-<model-viewer id="model-viewer-main" src="./glb/main.glb" camera-controls orientation="0 0 -90"  class="model-viewer-main"  camera-orbit = "200deg 40deg 70%"> 
-  <button id="hodo" name="load-360-data" class="button js-modal-button" slot="hotspot1" data-position="-1 2 1.2" data-toggle="modal" data-target="#CameraModal">
+<model-viewer id="model-viewer-main" src="./glb/main.glb" camera-controls orientation="0 0 -90" class="model-viewer-main" camera-orbit="200deg 40deg 70%"> <button id="hodo" name="load-360-data" class="button js-modal-button" slot="hotspot1" data-position="-1 2 1.2" data-toggle="modal" data-target="#CameraModal">
     歩道
   </button> <button id="kasenjiki" name="load-360-data" class="button js-modal-button" slot="hotspot2" data-position="-1 1.5 0" data-toggle="modal" data-target="#CameraModal">
     <div class="annotation">河川敷</div>
-  </button> <button id="kawara" name="load-360-data" class="button js-modal-button" slot="hotspot3" data-position="1 1.5 0" data-toggle="modal" data-target="#CameraModal">
-    <div class="annotation">河原</div>
   </button> <button id="nanbutekki" name="load-object-3d-model" class="button js-modal-button" slot="hotspot4" data-position="-2.6 2.3 1" data-toggle="modal" data-target="#Object3DModal">
     <div class="annotation">南部鉄器1</div>
   </button> <button id="nanbutekki2" name="load-object-3d-model" class="button js-modal-button" slot="hotspot4" data-position="-2.8 2.3 1">
@@ -54,9 +45,7 @@
     <div class="annotation" data-toggle="modal" data-target="#Object3DModal">大きなコッペパン</div>
   </button> <button id="miyazawakenji" name="load-object-3d-model" class="button js-modal-button" slot="hotspot6.1" data-position="1.5 3 3">
     <div class="annotation" data-toggle="modal" data-target="#Object3DModal">宮沢賢治像</div>
-  </button> 
-
-  <button id="wankosoba" name="load-object-3d-model" class="button js-modal-button" slot="hotspot6.2" data-position="-1 2 -2.5">
+  </button> <button id="wankosoba" name="load-object-3d-model" class="button js-modal-button" slot="hotspot6.2" data-position="-1 2 -2.5">
     <div class="annotation" data-toggle="modal" data-target="#Object3DModal">わんこそば</div>
   </button> <button id="wankosoba-big" name="load-object-3d-model" class="button js-modal-button" slot="hotspot6.2" data-position="-1 2 -2.5">
     <div class="annotation" data-toggle="modal" data-target="#Object3DModal">わんこそば2</div>
@@ -66,14 +55,15 @@
     <div class="annotation">開運橋</div>
   </button> <button id="kaiunbashi" name="load-pdf-data" class="button js-modal-button" slot="hotspot7" data-position="2 2 1" data-toggle="modal" data-target="#OmikujiModal">
     <div class="annotation">おみくじ</div>
+  </button> <button id="winter" name="change-model" class="button js-modal-button" slot="hotspot5.5" data-position="0 2 -2">
+    <div class="annotation">季節きりかえ</div>
+  </button> 
+<button id="night" name="change-model" class="button js-modal-button" slot="hotspot5.6" data-position="1 1.5 0">
+    <div class="annotation">イルミネーション</div>
   </button> 
 
-  <button id="winter" name="change-model" class="button js-modal-button" slot="hotspot5.5" data-position="0 2 -2">
-    <div class="annotation">環境の切り替え</div>
-  </button>
 
-
-   </model-viewer>
+</model-viewer>
 <!-- Modal -->
 <div class="modal fade" id="Object3DModal" role="dialog">
   <div class="modal-dialog">
@@ -99,15 +89,7 @@
       </div>
     </div>
   </div>
-
   <br>
-
-  <!-- MODEL VIEWER OUTSIDE MODAL -->
-
-
-
-
-
 <div class="modal fade" id="Object3DModal2" tabindex="-1" role="dialog" aria-labelledby="Object3DModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -130,8 +112,7 @@
           <span aria-hidden="true">&times;</span>
         </button> </div>
         <div class="modal-body">
-          <body>
-            <div id="vrview"></div>
+          <div id="vrview"></div>
         </div>
       </div>
     </div>
@@ -197,6 +178,6 @@
 </div>
 
 
-<script src="./script/script.js?11"></script>
+<script src="./script/script.js?ddd"></script>
 </body>
 </html>

@@ -1,60 +1,36 @@
-var vrView;
+var vrView = null;
+window.addEventListener('load', onVrViewLoad)
 
-function onLoad() {
+function onVrViewLoad() {
   vrView = new VRView.Player('#vrview', {
     width: '100%',
     height: 480,
-    image: '/images/hodo.jpg',
-    is_stereo: true,
-    is_autopan_off: true
+    image: './images/hodo.jpg'
   });
-  vrView.on('ready', onVRViewReady);
-  vrView.on('modechange', onModeChange);
-  vrView.on('getposition', onGetPosition);
-  vrView.on('error', onVRViewError);
 }
 
-function replace1(){
+function replace1() {
   vrView.setContent({
-    image: '/images/hodo.jpg',
-    preview:'/images/hodo.jpg',
-    is_stereo: true
-  });                     
+    image: './images/hodo.jpg'
+  });
 }
-function replace2(){
-  vrView.setContent({
-    image: '/images/kasenjiki.jpg',
-    preview:'/images/kasenjiki.jpg',
-    is_stereo: true
-  });                     
-}
-function replace3(){
-  vrView.setContent({
-    image: '/images/kasenjiki.jpg',
-    preview:'/images/kasenjiki.jpg',
-    is_stereo: true
-  });                     
-}
-window.addEventListener('load', onLoad);
 
+function replace2() {
+  vrView.setContent({
+    image: './images/kasenjiki.jpg'
+  });
+}
 
+function replace3() {
+  vrView.setContent({
+    image: './images/kasenjiki.jpg'
+  });
+}
 document.getElementById("hodo").onclick = function () {
-  //document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
-  //document.getElementById('model-viewer-modal').setAttribute('src', './images/hodo.jpg');
-  //document.getElementById('modalTitle360').innerHTML = "歩道";
   replace1();
 };
-document.getElementById("kawara").onclick = function () {
-  //document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
-  //document.getElementById('model-viewer-modal').setAttribute('src', './images/hodo.jpg');
-  //document.getElementById('modalTitle360').innerHTML = "河原";
-  replace2();
-};
 document.getElementById("kasenjiki").onclick = function () {
-  //document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
-  //document.getElementById('model-viewer-modal').setAttribute('src', './images/kasenjiki.jpg');
-  //document.getElementById('modalTitle360').innerHTML = "河川敷";
-  replace3();
+  replace2();
 };
 document.getElementById("nanbutekki").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
@@ -84,27 +60,44 @@ document.getElementById("wankosoba-shoumeisho").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/wankosoba-shoumeisho.glb');
 };
 
-var season = "spring";
+var season = "main";
 document.getElementById("winter").onclick = function () {
-  var modal = document.getElementById('model-viewer-main');
-  if (season == "spring") {
-    modal.setAttribute('src', './glb/winter.glb');
-    season = "winter";
+  if(season == "main"){
+    season = "winter"
+  }else if(season == "night"){
+    season = "main"
+  }else if(season == "winter"){
+    season = "main"
+  }
+  replaceMoel();
+};
+document.getElementById("night").onclick = function () {
+  if(season == "main"){
+    season = "night";
+  }else if(season == "night"){
+    season = "main";
+  }else if(season == "winter"){
+    season = "night";
+  }
+  replaceMoel();
+};
+
+function replaceMoel(){
+  var model = document.getElementById('model-viewer-main');
+  if (season == "winter") {
+    model.setAttribute('src', './glb/winter.glb');
     document.getElementById('csssnow').innerHTML = "●";
     document.getElementById('csssnow2nd').innerHTML = "●";
-  } else if(season == "winter") {
-    modal.setAttribute('src', './glb/main-night.glb');
-    season = "night";
+  } else if (season == "night") {
+    model.setAttribute('src', './glb/night.glb');
     document.getElementById('csssnow').innerHTML = "";
     document.getElementById('csssnow2nd').innerHTML = "";
-  } else{
-    modal.setAttribute('src', './glb/main.glb');
-    season = "spring";
+  } else if (season == "main"){
+    model.setAttribute('src', './glb/main.glb');
     document.getElementById('csssnow').innerHTML = "";
     document.getElementById('csssnow2nd').innerHTML = "";
   }
-};
-
+}
 
 
 var isOmikuji = false;
