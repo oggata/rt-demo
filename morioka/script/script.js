@@ -32,16 +32,23 @@ document.getElementById("hodo").onclick = function () {
 document.getElementById("kasenjiki").onclick = function () {
   replace2();
 };
+
+var nanbuId = 1;
 document.getElementById("nanbutekki").onclick = function () {
-  var random = Math.floor(Math.random() * 10) + 1;
-  var glbfile = "./glb/nanbutekki.glb";
-  if (1 <= random && random < 3) {
+  var glbfile = "";
+  if (nanbuId == 1) {
+    glbfile = "./glb/nanbutekki.glb";
+  } else if (nanbuId == 2) {
     glbfile = "./glb/nanbutekki2.glb";
-  } else if (3 <= random && random < 5) {
+  } else if (nanbuId == 3) {
     glbfile = "./glb/nanbutekki-fish.glb";
-  } else if (5 <= random && random < 7) {
+  } else if (nanbuId == 4) {
     glbfile = "./glb/nanbutekki-bird.glb";
   } 
+  nanbuId++;
+  if(nanbuId>4){
+    nanbuId = 1;
+  }
   document.getElementById('model-viewer-modal').setAttribute('src', glbfile);
 };
 
@@ -51,12 +58,19 @@ document.getElementById("fukudapan").onclick = function () {
 document.getElementById("miyazawakenji").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/miyazawakenji.glb');
 };
+var sobaId = 1;
 document.getElementById("wankosoba").onclick = function () {
   var random = Math.floor(Math.random() * 10) + 1;
-  var glbfile = "./glb/wankosoba.glb";
-  if (1 <= random && random < 4) {
+  var glbfile = "";
+  if (sobaId==1) {
+    glbfile = "./glb/wankosoba.glb";
+  } else if (sobaId == 2) {
     glbfile = "./glb/wankosoba-big.glb";
   } 
+  sobaId++;
+  if(sobaId>2){
+    sobaId=1;
+  }
   document.getElementById('model-viewer-modal').setAttribute('src', glbfile);
 };
 
