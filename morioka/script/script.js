@@ -66,9 +66,11 @@ document.getElementById("wankosoba").onclick = function () {
     glbfile = "./glb/wankosoba.glb";
   } else if (sobaId == 2) {
     glbfile = "./glb/wankosoba-big.glb";
+  } else if (sobaId == 3) {
+    glbfile = "./glb/room.glb";
   } 
   sobaId++;
-  if(sobaId>2){
+  if(sobaId>3){
     sobaId=1;
   }
   document.getElementById('model-viewer-modal').setAttribute('src', glbfile);
