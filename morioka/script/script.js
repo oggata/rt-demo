@@ -33,17 +33,18 @@ document.getElementById("kasenjiki").onclick = function () {
   replace2();
 };
 document.getElementById("nanbutekki").onclick = function () {
-  document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki.glb');
+  var random = Math.floor(Math.random() * 10) + 1;
+  var glbfile = "./glb/nanbutekki.glb";
+  if (1 <= random && random < 3) {
+    glbfile = "./glb/nanbutekki2.glb";
+  } else if (3 <= random && random < 5) {
+    glbfile = "./glb/nanbutekki-fish.glb";
+  } else if (5 <= random && random < 7) {
+    glbfile = "./glb/nanbutekki-bird.glb";
+  } 
+  document.getElementById('model-viewer-modal').setAttribute('src', glbfile);
 };
-document.getElementById("nanbutekki2").onclick = function () {
-  document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki2.glb');
-};
-document.getElementById("nanbutekki-fish").onclick = function () {
-  document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki-fish.glb');
-};
-document.getElementById("nanbutekki-bird").onclick = function () {
-  document.getElementById('model-viewer-modal').setAttribute('src', './glb/nanbutekki-bird.glb');
-};
+
 document.getElementById("fukudapan").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/fukudapan.glb');
 };
@@ -51,14 +52,14 @@ document.getElementById("miyazawakenji").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/miyazawakenji.glb');
 };
 document.getElementById("wankosoba").onclick = function () {
-  document.getElementById('model-viewer-modal').setAttribute('src', './glb/wankosoba.glb');
+  var random = Math.floor(Math.random() * 10) + 1;
+  var glbfile = "./glb/wankosoba.glb";
+  if (1 <= random && random < 4) {
+    glbfile = "./glb/wankosoba-big.glb";
+  } 
+  document.getElementById('model-viewer-modal').setAttribute('src', glbfile);
 };
-document.getElementById("wankosoba-big").onclick = function () {
-  document.getElementById('model-viewer-modal').setAttribute('src', './glb/wankosoba-big.glb');
-};
-document.getElementById("wankosoba-shoumeisho").onclick = function () {
-  document.getElementById('model-viewer-modal').setAttribute('src', './glb/wankosoba-shoumeisho.glb');
-};
+
 
 var season = "main";
 document.getElementById("winter").onclick = function () {
