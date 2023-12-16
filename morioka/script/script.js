@@ -32,7 +32,6 @@ document.getElementById("hodo").onclick = function () {
 document.getElementById("kasenjiki").onclick = function () {
   replace2();
 };
-
 var nanbuId = 1;
 document.getElementById("nanbutekki").onclick = function () {
   var glbfile = "";
@@ -44,14 +43,13 @@ document.getElementById("nanbutekki").onclick = function () {
     glbfile = "./glb/nanbutekki-fish.glb";
   } else if (nanbuId == 4) {
     glbfile = "./glb/nanbutekki-bird.glb";
-  } 
+  }
   nanbuId++;
-  if(nanbuId>4){
+  if (nanbuId > 4) {
     nanbuId = 1;
   }
   document.getElementById('model-viewer-modal').setAttribute('src', glbfile);
 };
-
 document.getElementById("fukudapan").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/fukudapan.glb');
 };
@@ -62,44 +60,42 @@ var sobaId = 1;
 document.getElementById("wankosoba").onclick = function () {
   var random = Math.floor(Math.random() * 10) + 1;
   var glbfile = "";
-  if (sobaId==1) {
+  if (sobaId == 1) {
     glbfile = "./glb/wankosoba.glb";
   } else if (sobaId == 2) {
     glbfile = "./glb/wankosoba-big.glb";
   } else if (sobaId == 3) {
     glbfile = "./glb/room.glb";
-  } 
+  }
   sobaId++;
-  if(sobaId>3){
-    sobaId=1;
+  if (sobaId > 3) {
+    sobaId = 1;
   }
   document.getElementById('model-viewer-modal').setAttribute('src', glbfile);
 };
-
-
 var season = "main";
 document.getElementById("winter").onclick = function () {
-  if(season == "main"){
+  if (season == "main") {
     season = "winter"
-  }else if(season == "night"){
+  } else if (season == "night") {
     season = "main"
-  }else if(season == "winter"){
+  } else if (season == "winter") {
     season = "main"
   }
   replaceMoel();
 };
 document.getElementById("night").onclick = function () {
-  if(season == "main"){
+  if (season == "main") {
     season = "night";
-  }else if(season == "night"){
+  } else if (season == "night") {
     season = "main";
-  }else if(season == "winter"){
+  } else if (season == "winter") {
     season = "night";
   }
   replaceMoel();
 };
 
-function replaceMoel(){
+function replaceMoel() {
   var model = document.getElementById('model-viewer-main');
   if (season == "winter") {
     model.setAttribute('src', './glb/winter.glb');
@@ -109,14 +105,12 @@ function replaceMoel(){
     model.setAttribute('src', './glb/night.glb');
     document.getElementById('csssnow').innerHTML = "";
     document.getElementById('csssnow2nd').innerHTML = "";
-  } else if (season == "main"){
+  } else if (season == "main") {
     model.setAttribute('src', './glb/main.glb');
     document.getElementById('csssnow').innerHTML = "";
     document.getElementById('csssnow2nd').innerHTML = "";
   }
 }
-
-
 var isOmikuji = false;
 
 function omikuji() {

@@ -7,6 +7,26 @@
     font-size: 1.1em;
   }
 
+  .btn--yellow, a.btn--yellow {
+    display: block;
+    margin: 5px 5px;
+    padding: 4px;
+    border: solid 2px #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ffc04c;
+  }
+
+  .btn--yellow:hover, a.btn--yellow:hover {
+    color: #fff;
+    background: #ffc04c;
+  }
+
+  a.btn--radius {
+    border-radius: 100vh;
+  }
+
   body {
     height: 100vh;
     width: 100vw;
@@ -21,7 +41,7 @@
   }
 
   .modal-content {
-    background: #F0F8FF;
+    background: #e0ffff;
     box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 13px;
     opacity: 0.9;
@@ -41,11 +61,13 @@
     border-radius: 6px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
     overflow: hidden;
+    background-color: steelblue;
   }
 
   #model-viewer-modal {
     width: 100%;
     height: 300px;
+    background-color: steelblue;
   }
 
   .attribution {
