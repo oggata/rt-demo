@@ -56,6 +56,8 @@ document.getElementById("fukudapan").onclick = function () {
 document.getElementById("miyazawakenji").onclick = function () {
   document.getElementById('model-viewer-modal').setAttribute('src', './glb/miyazawakenji.glb');
 };
+
+/*
 var sobaId = 1;
 document.getElementById("wankosoba").onclick = function () {
   var random = Math.floor(Math.random() * 10) + 1;
@@ -73,6 +75,7 @@ document.getElementById("wankosoba").onclick = function () {
   }
   document.getElementById('model-viewer-modal').setAttribute('src', glbfile);
 };
+*/
 var season = "main";
 document.getElementById("winter").onclick = function () {
   if (season == "main") {
