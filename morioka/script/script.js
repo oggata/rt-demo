@@ -79,6 +79,7 @@ document.getElementById("wankosoba").onclick = function () {
 var season = "main";
 document.getElementById("winter").onclick = function () {
   if (season == "main") {
+    alert("こちらはさまざまな景観を楽しんでいただく参考イメージです.");
     season = "winter"
   } else if (season == "night") {
     season = "main"
@@ -89,10 +90,12 @@ document.getElementById("winter").onclick = function () {
 };
 document.getElementById("night").onclick = function () {
   if (season == "main") {
+    alert("こちらはさまざまな景観を楽しんでいただく参考イメージです.");
     season = "night";
   } else if (season == "night") {
     season = "main";
   } else if (season == "winter") {
+    alert("こちらはさまざまな景観を楽しんでいただく参考イメージです.");
     season = "night";
   }
   replaceMoel();
